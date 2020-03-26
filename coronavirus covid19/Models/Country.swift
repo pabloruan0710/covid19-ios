@@ -9,14 +9,23 @@
 import Foundation
 
 struct Country: Decodable {
-    var id: Int
-    var pais: String
-    var casos: Int64
-    var casos_hoje: Int64
-    var mortes: Int64
-    var mortes_hoje: Int64
-    var recuperados: Int64
-    var criticos: Int64
-    var dia: Date
-    var atualizacao: String
+    var country: String?
+    var countryInfo: CountryInfo?
+    var cases: Int64
+    var todayCases: Int64
+    var deaths: Int64
+    var todayDeaths: Int64
+    var recovered: Int64
+    var active: Int64
+    var critical: Int64
+    var casesPerOneMillion: Int64
+    var deathsPerOneMillion: Int64
+}
+
+struct CountryInfo: Decodable {
+    var iso2: String
+    var iso3: String
+    var lat: Double?
+    var long: Double?
+    var flag: String?
 }

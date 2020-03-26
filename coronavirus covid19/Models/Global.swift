@@ -9,10 +9,8 @@
 import Foundation
 
 struct Global: Decodable {
-    var id: Int
-    var casos: Int64
-    var mortes: Int64
-    var recuperados: Int64
-    var dia: Date
-    var atualizacao: String
+    var cases: Int64
+    var deaths: Int64
+    var recovered: Int64
+    var updated: Int64
 }

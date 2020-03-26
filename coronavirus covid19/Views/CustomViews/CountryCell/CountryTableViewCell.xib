@@ -40,6 +40,13 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vfo-qO-xa8">
+                        <rect key="frame" x="16" y="6" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="3UF-nu-nrI"/>
+                            <constraint firstAttribute="height" constant="40" id="NeT-hd-Mgh"/>
+                        </constraints>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infectados" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIe-Wq-AXX">
                         <rect key="frame" x="221" y="9" width="62" height="15"/>
                         <constraints>
@@ -54,10 +61,12 @@
                 <constraints>
                     <constraint firstItem="SAI-D1-Ov1" firstAttribute="centerY" secondItem="g1k-C9-pbV" secondAttribute="centerY" constant="7" id="0QB-Vq-Oq5"/>
                     <constraint firstItem="UdV-lM-g4O" firstAttribute="centerY" secondItem="g1k-C9-pbV" secondAttribute="centerY" id="3gk-W8-IXg"/>
+                    <constraint firstItem="vfo-qO-xa8" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3ss-pB-R7L"/>
                     <constraint firstItem="tIe-Wq-AXX" firstAttribute="top" secondItem="g1k-C9-pbV" secondAttribute="top" constant="3" id="AMi-nH-BgH"/>
                     <constraint firstAttribute="trailing" secondItem="SAI-D1-Ov1" secondAttribute="trailing" constant="8" id="ESj-LM-s1z"/>
                     <constraint firstItem="g1k-C9-pbV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="EdA-z7-d2T"/>
                     <constraint firstItem="UdV-lM-g4O" firstAttribute="leading" secondItem="g1k-C9-pbV" secondAttribute="trailing" constant="8" id="XgS-A8-ehM"/>
+                    <constraint firstItem="vfo-qO-xa8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="bX6-Rc-1Aw"/>
                     <constraint firstItem="g1k-C9-pbV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sC3-LS-SxX"/>
                     <constraint firstAttribute="trailing" secondItem="tIe-Wq-AXX" secondAttribute="trailing" constant="8" id="zdw-uw-4My"/>
                 </constraints>
@@ -65,6 +74,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="flag" destination="g1k-C9-pbV" id="ygl-j3-3JP"/>
+                <outlet property="imageFlag" destination="vfo-qO-xa8" id="8em-QV-Bkt"/>
                 <outlet property="lbInfectados" destination="SAI-D1-Ov1" id="7gS-ws-Ecy"/>
                 <outlet property="lbPais" destination="UdV-lM-g4O" id="1nV-0p-iWc"/>
             </connections>

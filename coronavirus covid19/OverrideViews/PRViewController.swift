@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import MBProgressHUD
+import PKHUD
 
-class PRViewController: UIViewController {
+class PRViewController: UIViewController, ViewControllerType {
     
-    private var hud : MBProgressHUD?
     
     init(viewModel: ViewModelType?) {
         super.init(nibName: nil, bundle: nil)
@@ -23,24 +22,19 @@ class PRViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.initHudLoad()
+        initHudLoad()
     }
 
     private func initHudLoad() {
-        hud = MBProgressHUD(view: self.view)
-        hud?.mode = .indeterminate
-        hud?.label.text = "Aguarde"
-        
+        _ = PKHUD(viewToPresentOn: self.view)
     }
-}
-
-extension PRViewController: ViewControllerType {
     func showLoading() {
-        hud?.show(animated: true)
+        HUD.hide()
+        HUD.show(.labeledProgress(title: "Aguarde", subtitle: nil))
     }
     
     func hideLoading() {
-        hud?.hide(animated: true)
+        HUD.hide()
     }
     
     func showError(msg: String?) {

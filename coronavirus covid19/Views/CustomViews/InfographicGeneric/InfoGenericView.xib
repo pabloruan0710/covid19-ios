@@ -10,9 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoGenericView" customModule="Coronavirus_COVID19" customModuleProvider="target">
             <connections>
-                <outlet property="cardProgress" destination="Oht-iy-QJU" id="37y-rs-9hB"/>
+                <outlet property="cardProgress" destination="Oht-iy-QJU" id="92u-zu-PU1"/>
                 <outlet property="cardShadown" destination="vEf-WP-dl0" id="hd4-Ak-OyR"/>
-                <outlet property="lbTotalCriticos" destination="WXK-ZQ-gEf" id="PAq-kk-CPu"/>
                 <outlet property="lbTotalInfectados" destination="2zr-3f-aOC" id="N8S-oH-bye"/>
                 <outlet property="lbTotalInfectadosHoje" destination="l9Y-WH-01o" id="1ha-Jo-xlO"/>
                 <outlet property="lbTotalMortes" destination="pgB-JV-iIE" id="RBe-RS-mLV"/>
@@ -182,7 +181,7 @@ Hoje</string>
                             <rect key="frame" x="10" y="12" width="209" height="336"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEH-Sb-vbN" userLabel="InfectadosView">
-                                    <rect key="frame" x="0.0" y="0.0" width="209" height="84"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="209" height="112"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infectados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQN-KV-loy">
                                             <rect key="frame" x="23" y="15" width="178" height="21"/>
@@ -227,7 +226,7 @@ Hoje</string>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PqK-s8-hub" userLabel="mortosView">
-                                    <rect key="frame" x="0.0" y="84" width="209" height="84"/>
+                                    <rect key="frame" x="0.0" y="112" width="209" height="112"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mortes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TrA-tT-OBu">
                                             <rect key="frame" x="23" y="15" width="178" height="21"/>
@@ -271,53 +270,8 @@ Hoje</string>
                                         <constraint firstAttribute="trailing" secondItem="TrA-tT-OBu" secondAttribute="trailing" constant="8" id="tJk-Dm-OZo"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omJ-y7-zWj" userLabel="criticosView">
-                                    <rect key="frame" x="0.0" y="168" width="209" height="84"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Critícos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yB2-ZO-UCK">
-                                            <rect key="frame" x="23" y="15" width="178" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="ozc-fX-5XB"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXK-ZQ-gEf">
-                                            <rect key="frame" x="23" y="36" width="178" height="32"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="32" id="84E-vg-7U3"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZ8-ww-Hpg">
-                                            <rect key="frame" x="12" y="15" width="3" height="50"/>
-                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="Fpi-Bf-B38"/>
-                                                <constraint firstAttribute="width" constant="3" id="VG7-Yz-jpH"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    <constraints>
-                                        <constraint firstItem="yB2-ZO-UCK" firstAttribute="top" secondItem="omJ-y7-zWj" secondAttribute="top" constant="15" id="Hpi-kB-kMl"/>
-                                        <constraint firstItem="KZ8-ww-Hpg" firstAttribute="leading" secondItem="omJ-y7-zWj" secondAttribute="leading" constant="12" id="UcS-mj-28U"/>
-                                        <constraint firstItem="WXK-ZQ-gEf" firstAttribute="leading" secondItem="KZ8-ww-Hpg" secondAttribute="trailing" constant="8" id="Wih-AP-Jul"/>
-                                        <constraint firstItem="yB2-ZO-UCK" firstAttribute="leading" secondItem="KZ8-ww-Hpg" secondAttribute="trailing" constant="8" id="dsv-wZ-KOF"/>
-                                        <constraint firstItem="KZ8-ww-Hpg" firstAttribute="top" secondItem="omJ-y7-zWj" secondAttribute="top" constant="15" id="mC5-cg-zgV"/>
-                                        <constraint firstItem="WXK-ZQ-gEf" firstAttribute="top" secondItem="yB2-ZO-UCK" secondAttribute="bottom" id="uOI-40-3TF"/>
-                                        <constraint firstAttribute="trailing" secondItem="WXK-ZQ-gEf" secondAttribute="trailing" constant="8" id="vod-Py-upc"/>
-                                        <constraint firstAttribute="trailing" secondItem="yB2-ZO-UCK" secondAttribute="trailing" constant="8" id="ycW-bi-abs"/>
-                                    </constraints>
-                                </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yM1-ai-8fQ" userLabel="recuperadosView">
-                                    <rect key="frame" x="0.0" y="252" width="209" height="84"/>
+                                    <rect key="frame" x="0.0" y="224" width="209" height="112"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recuperados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1H-Qg-43W">
                                             <rect key="frame" x="23" y="15" width="178" height="21"/>
@@ -363,13 +317,46 @@ Hoje</string>
                                 </view>
                             </subviews>
                         </stackView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oht-iy-QJU">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oht-iy-QJU" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
                             <rect key="frame" x="248" y="105" width="150" height="150"/>
-                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="150" id="FED-0R-d68"/>
                                 <constraint firstAttribute="height" constant="150" id="dpR-UE-5QO"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                    <real key="value" value="50"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                    <real key="value" value="100"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="fullCircle" value="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="shouldShowValueText" value="YES"/>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="shouldDrawMinValueKnob" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                    <real key="value" value="-90"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="outerRingWidth">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="outerRingColor">
+                                    <color key="value" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="innerRingWidth">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="innerRingColor">
+                                    <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="innerRingSpacing">
+                                    <real key="value" value="-16"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="isClockwise" value="YES"/>
+                            </userDefinedRuntimeAttributes>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taxa Mortalidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDm-HE-QSj">
                             <rect key="frame" x="255.5" y="76" width="135" height="21"/>

@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-coronavirus covid19-coronavirus covid19UITests/Pods-coronavirus covid19-coronavirus covid19UITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
+${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework
+${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework

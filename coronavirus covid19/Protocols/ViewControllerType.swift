@@ -15,4 +15,6 @@ protocol ViewControllerType: class {
     func refreshView()
 }
 
-
+extension ViewControllerType {
+    func refreshView() {}
+}

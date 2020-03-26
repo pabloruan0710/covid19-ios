@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UICircularProgressRing
 
 @IBDesignable
 class InfoGenericView: UIView {
@@ -19,8 +20,7 @@ class InfoGenericView: UIView {
     @IBOutlet weak var lbTotalRecuperadosHoje: UILabel!
     @IBOutlet weak var lbTotalMortosHoje: UILabel!
     @IBOutlet weak var lbTotalInfectadosHoje: UILabel!
-    @IBOutlet weak var lbTotalCriticos: UILabel!
-    @IBOutlet weak var cardProgress: UIView!
+    @IBOutlet weak var cardProgress: UICircularProgressRing!
     @IBOutlet weak var cardShadown: UIView!
     
     override func layoutSubviews() {
@@ -62,6 +62,18 @@ class InfoGenericView: UIView {
         return nib.instantiate(
                     withOwner: self,
                     options: nil).first as? UIView
+    }
+    
+    func setValorCircular(valor: CGFloat) {
+        //cardProgress.value = valor
+        if valor == 0 {
+            self.cardProgress.shouldShowValueText = false
+        } else {
+            self.cardProgress.shouldShowValueText = true
+        }
+        print(valor)
+        cardProgress.startProgress(to: valor, duration: 2.0) {
+        }
     }
     
     func shadownSetup() {

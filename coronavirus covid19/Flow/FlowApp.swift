@@ -11,6 +11,8 @@ import UIKit
 
 struct FlowApp {
     
+    private static var serviceAPI = APIClient()
+    
     static func startRootView(window: UIWindow?) {
         let tabBar = self.tabBarInit()
         tabBar.setViewControllers(self.makeTabMenu(), animated: false)
@@ -26,7 +28,7 @@ struct FlowApp {
     
     // MARK: -ViewControllers
     private static func homeView() -> PRViewController {
-        let viewModel = HomeViewModel()
+        let viewModel = HomeViewModel(service: self.serviceAPI)
         let home = HomeViewController(viewModel: viewModel)
         home.tabBarItem = self.makeTabBarButton(image: "global", tag: 1)
         return home

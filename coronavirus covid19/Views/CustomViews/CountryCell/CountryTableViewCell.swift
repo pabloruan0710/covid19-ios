@@ -17,6 +17,7 @@ class CountryTableViewCell: UITableViewCell {
         return String(describing: self)
     }
     
+    @IBOutlet weak var imageFlag: UIImageView!
     @IBOutlet weak var flag: UILabel!
     @IBOutlet weak var lbPais: UILabel!
     @IBOutlet weak var lbInfectados: UILabel!
@@ -32,8 +33,8 @@ class CountryTableViewCell: UITableViewCell {
     }
     
     func setupCountryData(country: Country) {
-        lbPais.text = country.pais
-        lbInfectados.text = country.casos.description
-        flag.text = country.pais.prefix(2).capitalized
+        lbPais.text = country.country
+        lbInfectados.text = country.cases.formatarMilhar
+        flag.text = country.country?.prefix(2).capitalized
     }
 }

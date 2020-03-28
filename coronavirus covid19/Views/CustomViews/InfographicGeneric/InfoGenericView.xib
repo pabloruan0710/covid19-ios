@@ -17,7 +17,6 @@
                 <outlet property="lbTotalMortes" destination="pgB-JV-iIE" id="RBe-RS-mLV"/>
                 <outlet property="lbTotalMortosHoje" destination="c1g-cZ-We9" id="0tf-vg-vNb"/>
                 <outlet property="lbTotalRecuperados" destination="MeR-6k-jMh" id="Aqg-Ki-g0F"/>
-                <outlet property="lbTotalRecuperadosHoje" destination="O7g-A9-3OV" id="fkL-3b-0fe"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -32,19 +31,29 @@
                             <rect key="frame" x="20" y="368" width="378" height="70"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bwb-fI-9mr">
-                                    <rect key="frame" x="0.0" y="0.0" width="126" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="189" height="70"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infectados Hoje" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7RQ-TI-xvz">
-                                            <rect key="frame" x="20" y="8" width="86" height="28"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7RQ-TI-xvz">
+                                            <rect key="frame" x="20" y="8" width="149" height="28"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="28" id="yaI-Yd-PzF"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
-                                            <nil key="textColor"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Casos ">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="controlContent" size="11"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="Hoje">
+                                                    <attributes>
+                                                        <font key="NSFont" size="11" name="AvenirNext-Bold"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9Y-WH-01o">
-                                            <rect key="frame" x="20" y="47" width="86" height="23"/>
+                                            <rect key="frame" x="20" y="47" width="149" height="23"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -75,21 +84,31 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6w6-wK-a7D">
-                                    <rect key="frame" x="126" y="0.0" width="126" height="70"/>
+                                    <rect key="frame" x="189" y="0.0" width="189" height="70"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dje-AD-gv5">
-                                            <rect key="frame" x="20" y="8" width="86" height="28"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dje-AD-gv5">
+                                            <rect key="frame" x="20" y="8" width="149" height="28"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="28" id="Hlg-LG-AM7"/>
                                             </constraints>
-                                            <string key="text">Mortos
-Hoje</string>
-                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
-                                            <nil key="textColor"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Mortos ">
+                                                    <attributes>
+                                                        <font key="NSFont" metaFont="controlContent" size="11"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="Hoje">
+                                                    <attributes>
+                                                        <font key="NSFont" size="11" name="AvenirNext-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1g-cZ-We9">
-                                            <rect key="frame" x="20" y="47" width="86" height="23"/>
+                                            <rect key="frame" x="20" y="47" width="149" height="23"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -119,49 +138,6 @@ Hoje</string>
                                         <constraint firstAttribute="trailing" secondItem="c1g-cZ-We9" secondAttribute="trailing" constant="20" symbolic="YES" id="oAT-0Z-0sJ"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATE-aq-Xcb">
-                                    <rect key="frame" x="252" y="0.0" width="126" height="70"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recuperados Hoje" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAf-RV-qHv">
-                                            <rect key="frame" x="20" y="8" width="86" height="28"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="28" id="BM9-Tc-mad"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7g-A9-3OV">
-                                            <rect key="frame" x="20" y="47" width="86" height="23"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xce-v9-ayk">
-                                            <rect key="frame" x="20" y="36" width="60" height="3"/>
-                                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="3" id="9Yc-yI-iec"/>
-                                                <constraint firstAttribute="width" constant="60" id="x72-sT-h6E"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="O7g-A9-3OV" secondAttribute="bottom" id="BAc-BL-w7X"/>
-                                        <constraint firstItem="O7g-A9-3OV" firstAttribute="leading" secondItem="ATE-aq-Xcb" secondAttribute="leading" constant="20" symbolic="YES" id="Eq5-7H-LFE"/>
-                                        <constraint firstItem="Xce-v9-ayk" firstAttribute="top" secondItem="XAf-RV-qHv" secondAttribute="bottom" id="QNd-1x-EeE"/>
-                                        <constraint firstItem="XAf-RV-qHv" firstAttribute="top" secondItem="ATE-aq-Xcb" secondAttribute="top" constant="8" id="UJW-PH-We0"/>
-                                        <constraint firstItem="O7g-A9-3OV" firstAttribute="top" secondItem="Xce-v9-ayk" secondAttribute="bottom" constant="8" symbolic="YES" id="ema-XM-cze"/>
-                                        <constraint firstItem="Xce-v9-ayk" firstAttribute="leading" secondItem="ATE-aq-Xcb" secondAttribute="leading" constant="20" symbolic="YES" id="g2b-cv-i5w"/>
-                                        <constraint firstAttribute="trailing" secondItem="XAf-RV-qHv" secondAttribute="trailing" constant="20" symbolic="YES" id="h0Z-Xb-gGg"/>
-                                        <constraint firstAttribute="trailing" secondItem="O7g-A9-3OV" secondAttribute="trailing" constant="20" symbolic="YES" id="r6G-fd-Boa"/>
-                                        <constraint firstItem="XAf-RV-qHv" firstAttribute="leading" secondItem="ATE-aq-Xcb" secondAttribute="leading" constant="20" symbolic="YES" id="yzL-us-eQ7"/>
-                                    </constraints>
-                                </view>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="n7A-B7-0O7"/>
@@ -183,7 +159,7 @@ Hoje</string>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEH-Sb-vbN" userLabel="InfectadosView">
                                     <rect key="frame" x="0.0" y="0.0" width="209" height="112"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infectados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQN-KV-loy">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Casos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQN-KV-loy">
                                             <rect key="frame" x="23" y="15" width="178" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="aMg-0n-XjP"/>
@@ -192,7 +168,7 @@ Hoje</string>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zr-3f-aOC">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zr-3f-aOC">
                                             <rect key="frame" x="23" y="36" width="178" height="32"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="32" id="lnY-pB-7Zx"/>
@@ -237,7 +213,7 @@ Hoje</string>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgB-JV-iIE">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgB-JV-iIE">
                                             <rect key="frame" x="23" y="36" width="178" height="32"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="32" id="Ha0-YL-4bv"/>
@@ -282,7 +258,7 @@ Hoje</string>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeR-6k-jMh">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeR-6k-jMh">
                                             <rect key="frame" x="23" y="36" width="178" height="32"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="32" id="3PD-l1-pjU"/>
@@ -358,12 +334,12 @@ Hoje</string>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isClockwise" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taxa Mortalidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDm-HE-QSj">
-                            <rect key="frame" x="255.5" y="76" width="135" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+- Taxa Mortalidade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDm-HE-QSj">
+                            <rect key="frame" x="248.5" y="76" width="149.5" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="B8H-yW-ZKp"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>

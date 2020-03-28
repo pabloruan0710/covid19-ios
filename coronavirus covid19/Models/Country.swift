@@ -16,15 +16,15 @@ struct Country: Decodable {
     var deaths: Int64
     var todayDeaths: Int64
     var recovered: Int64
-    var active: Int64
-    var critical: Int64
-    var casesPerOneMillion: Int64
-    var deathsPerOneMillion: Int64
+    var active: Int64?
+    var critical: Int64?
+    var casesPerOneMillion: Double?
+    var deathsPerOneMillion: Double?
 }
 
 struct CountryInfo: Decodable {
-    var iso2: String
-    var iso3: String
+    var iso2: String?
+    var iso3: String?
     var lat: Double?
     var long: Double?
     var flag: String?

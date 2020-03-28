@@ -7,24 +7,38 @@
 //
 
 import UIKit
+import WebKit
 
-class NoticiasViewController: PRViewController {
+class NoticiasViewController: PRViewController, WKNavigationDelegate {
 
+    @IBOutlet weak var webView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let htmlContent = """
+            <meta name='viewport' content='initial-scale=1.0'/>
+            <a class="twitter-timeline" href="https://twitter.com/minsaude?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            """
+        webView.navigationDelegate = self
+        webView.loadHTMLString(htmlContent, baseURL: nil)
+        self.showLoading()
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        self.hideLoading()
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+      if navigationAction.navigationType == .linkActivated  {
+        if let url = navigationAction.request.url,
+        UIApplication.shared.canOpenURL(url) {
+          UIApplication.shared.open(url)
+          decisionHandler(.cancel)
+        } else {
+          decisionHandler(.allow)
+          }
+      } else {
+          decisionHandler(.allow)
+         }
     }
-    */
-
 }

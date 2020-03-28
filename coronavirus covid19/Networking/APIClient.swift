@@ -16,10 +16,25 @@ class APIClient: NetworkProtocolType {
             switch response.result {
             case .success(let values):
                 completion(true, values)
-            case .failure(let err):
+            case .failure(_):
+                debugPrint(response.result)
+                //debugPrint(err)
                 completion(false, nil)
-                print(err.localizedDescription)
             }
         }
+    }
+    
+    func post<T, EncodableType: Encodable>(url: String, params: EncodableType?, response: T.Type, completion: @escaping (Bool, T?) -> Void) where T : Decodable {
+        AF.request(url, method: .post, parameters: params, encoder: JSONParameterEncoder.default)
+            .responseDecodable(of: response.self) { response in
+                   switch response.result {
+                   case .success(let values):
+                       completion(true, values)
+                   case .failure(_):
+                       debugPrint(response.result)
+                       //debugPrint(err)
+                       completion(false, nil)
+                   }
+               }
     }
 }

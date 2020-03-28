@@ -34,13 +34,13 @@ struct FlowApp {
         return home
     }
     
-    private static func paisView() -> PRViewController {
+    /*private static func paisView() -> PRViewController {
         let viewModel = PaisViewModel()
         let home = PaisViewController(viewModel: viewModel)
         //let titulo: String = "Pais Usuario"
         home.tabBarItem = self.makeTabBarButton(titulo: nil, image: "flag", tag: 2)
         return home
-    }
+    }*/
     
     private static func noticiasView() -> PRViewController {
         let viewModel = NoticiasViewModel()
@@ -50,7 +50,7 @@ struct FlowApp {
     }
     
     private static func dicasView() -> PRViewController {
-        let viewModel = DicasViewModel()
+        let viewModel = DicasViewModel(service: self.serviceAPI)
         let home = DicasViewController(viewModel: viewModel)
         home.tabBarItem = self.makeTabBarButton(titulo: nil, image: "dicas", tag: 4)
         return home
@@ -74,11 +74,11 @@ struct FlowApp {
         // Checca se selecionou Pais, caso não
         // ocultar menu pais
         let menu1 = homeView()
-        let menu2 = paisView()
+        //let menu2 = paisView()
         let menu3 = noticiasView()
-        let menu4 = dicasView()
+        //let menu4 = dicasView()
         
-        return [menu1, menu2, menu3, menu4]
+        return [menu1, /*menu2, menu3,*/ menu3]
     }
     
 }

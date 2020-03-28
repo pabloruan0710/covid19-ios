@@ -9,6 +9,8 @@ target 'coronavirus covid19' do
    pod 'PKHUD', '~> 5.0'
    pod 'UICircularProgressRing'
    pod 'Charts'
+   pod 'Firebase/Analytics'
+   pod 'Firebase/Crashlytics'
 
   target 'coronavirus covid19Tests' do
     inherit! :search_paths

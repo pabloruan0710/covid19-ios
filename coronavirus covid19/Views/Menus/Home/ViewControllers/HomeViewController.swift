@@ -44,6 +44,7 @@ class HomeViewController: PRViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.tableFooterView = UIView()
+        self.tableView.contentInset = UIEdgeInsets(top: 408, left: 0, bottom: 0, right: 0)
         self.tableView.backgroundColor = .clear
         self.viewHeaderOpacity.alpha = 0.0
         self.push = UIRefreshControl()
@@ -67,6 +68,8 @@ class HomeViewController: PRViewController {
         cardInfo.setTotalRecuperados(recuperados: global.recovered.formatarMilhar)
         cardInfo.setTotalMortes(mortes: global.deaths.formatarMilhar)
         cardInfo.setValorCircular(valor: self.viewModel?.taxaMortalidade ?? 0)
+        cardInfo.setMortesHoje(mortes: self.viewModel?.deathsToday ?? "")
+        cardInfo.setInfectadosHoje(total: self.viewModel?.casesToday ?? "")
     }
 }
 
@@ -83,18 +86,22 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setupCountryData(country: country)
         return cell
     }
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 408
-    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let vie = UIView()
         vie.backgroundColor = .clear
         return vie
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let country = self.viewModel?.items[indexPath.row] else { return }
+        self.viewModel?.openDetailCountry(country: country)
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let alfa = (scrollView.contentOffset.y*1.3)/self.viewHeaderOpacity.frame.height
-        if alfa <= 1 {
+        let offset = scrollView.contentOffset.y
+        if (offset < 0) {
+            let alfa = (1-(offset * -1)/self.viewHeaderOpacity.frame.height)*1.4 // aumentar em 40%
             UIView.animate(withDuration: 0.1) {
                 self.viewHeaderOpacity.alpha = alfa
             }

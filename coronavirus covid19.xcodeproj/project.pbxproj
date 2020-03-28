@@ -31,6 +31,13 @@
 		FA1E2BF2242AF7B100F33BEA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E2BF1242AF7B100F33BEA /* Constants.swift */; };
 		FA1E2BF4242AFAD000F33BEA /* GlobalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E2BF3242AFAD000F33BEA /* GlobalService.swift */; };
 		FA1E2BF6242C3D4800F33BEA /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1E2BF5242C3D4800F33BEA /* Int+Extension.swift */; };
+		FA23CC41242E5E6700344B2E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FA23CC40242E5E6700344B2E /* Kingfisher */; };
+		FA23CC43242E618400344B2E /* Historical.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23CC42242E618400344B2E /* Historical.swift */; };
+		FA23CC45242E624900344B2E /* HistoricalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23CC44242E624900344B2E /* HistoricalService.swift */; };
+		FA23CC48242E946400344B2E /* Charts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23CC47242E946400344B2E /* Charts.swift */; };
+		FA23CC4A242EA32300344B2E /* TipsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23CC49242EA32300344B2E /* TipsService.swift */; };
+		FA23CC4C242EA34200344B2E /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23CC4B242EA34200344B2E /* Tip.swift */; };
+		FA23CC50242FCCB000344B2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA23CC4F242FCCB000344B2E /* GoogleService-Info.plist */; };
 		FA5AFE19242A9CAF00BDE4BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5AFE18242A9CAF00BDE4BF /* AppDelegate.swift */; };
 		FA5AFE22242A9CB000BDE4BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5AFE21242A9CB000BDE4BF /* Assets.xcassets */; };
 		FA5AFE25242A9CB000BDE4BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5AFE23242A9CB000BDE4BF /* LaunchScreen.storyboard */; };
@@ -101,7 +108,13 @@
 		FA1E2BF1242AF7B100F33BEA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA1E2BF3242AFAD000F33BEA /* GlobalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalService.swift; sourceTree = "<group>"; };
 		FA1E2BF5242C3D4800F33BEA /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
-		FA5AFE15242A9CAF00BDE4BF /* Coronavirus COVID19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coronavirus COVID19.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA23CC42242E618400344B2E /* Historical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Historical.swift; sourceTree = "<group>"; };
+		FA23CC44242E624900344B2E /* HistoricalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalService.swift; sourceTree = "<group>"; };
+		FA23CC47242E946400344B2E /* Charts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charts.swift; sourceTree = "<group>"; };
+		FA23CC49242EA32300344B2E /* TipsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsService.swift; sourceTree = "<group>"; };
+		FA23CC4B242EA34200344B2E /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		FA23CC4F242FCCB000344B2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FA5AFE15242A9CAF00BDE4BF /* Coronavírus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coronavírus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5AFE18242A9CAF00BDE4BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA5AFE21242A9CB000BDE4BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA5AFE24242A9CB000BDE4BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -133,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA23CC41242E5E6700344B2E /* Kingfisher in Frameworks */,
 				FA5AFE69242AA09E00BDE4BF /* Alamofire in Frameworks */,
 				D46E628CB1018A76910881D7 /* Pods_coronavirus_covid19.framework in Frameworks */,
 			);
@@ -185,6 +199,8 @@
 			children = (
 				FA1E2BE7242AE7FC00F33BEA /* Country.swift */,
 				FA1E2BE9242AE92400F33BEA /* Global.swift */,
+				FA23CC42242E618400344B2E /* Historical.swift */,
+				FA23CC4B242EA34200344B2E /* Tip.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,6 +218,8 @@
 			children = (
 				FA1E2BEB242AF67900F33BEA /* CountryService.swift */,
 				FA1E2BF3242AFAD000F33BEA /* GlobalService.swift */,
+				FA23CC44242E624900344B2E /* HistoricalService.swift */,
+				FA23CC49242EA32300344B2E /* TipsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -217,6 +235,7 @@
 		FA1E2BD9242AD2C300F33BEA /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				FA23CC46242E945B00344B2E /* Charts */,
 				FA1E2BE1242AE53C00F33BEA /* CountryCell */,
 				FA1E2BE0242AE52700F33BEA /* InfographicGeneric */,
 			);
@@ -241,6 +260,14 @@
 			path = CountryCell;
 			sourceTree = "<group>";
 		};
+		FA23CC46242E945B00344B2E /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				FA23CC47242E946400344B2E /* Charts.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
 		FA5AFE0C242A9CAF00BDE4BF = {
 			isa = PBXGroup;
 			children = (
@@ -256,7 +283,7 @@
 		FA5AFE16242A9CAF00BDE4BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA5AFE15242A9CAF00BDE4BF /* Coronavirus COVID19.app */,
+				FA5AFE15242A9CAF00BDE4BF /* Coronavírus.app */,
 				FA5AFE2B242A9CB000BDE4BF /* coronavirus covid19Tests.xctest */,
 				FA5AFE36242A9CB000BDE4BF /* coronavirus covid19UITests.xctest */,
 			);
@@ -278,6 +305,7 @@
 				FA5AFE6D242AA27E00BDE4BF /* Utils */,
 				FA5AFE21242A9CB000BDE4BF /* Assets.xcassets */,
 				FA5AFE26242A9CB000BDE4BF /* Info.plist */,
+				FA23CC4F242FCCB000344B2E /* GoogleService-Info.plist */,
 				FA5AFE23242A9CB000BDE4BF /* LaunchScreen.storyboard */,
 			);
 			path = "coronavirus covid19";
@@ -494,6 +522,7 @@
 				FA5AFE12242A9CAF00BDE4BF /* Frameworks */,
 				FA5AFE13242A9CAF00BDE4BF /* Resources */,
 				2FBEF0A4D49981E7C6222D28 /* [CP] Embed Pods Frameworks */,
+				FA23CC51242FCD0200344B2E /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -502,9 +531,10 @@
 			name = "coronavirus covid19";
 			packageProductDependencies = (
 				FA5AFE68242AA09E00BDE4BF /* Alamofire */,
+				FA23CC40242E5E6700344B2E /* Kingfisher */,
 			);
 			productName = "coronavirus covid19";
-			productReference = FA5AFE15242A9CAF00BDE4BF /* Coronavirus COVID19.app */;
+			productReference = FA5AFE15242A9CAF00BDE4BF /* Coronavírus.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FA5AFE2A242A9CB000BDE4BF /* coronavirus covid19Tests */ = {
@@ -580,6 +610,7 @@
 			mainGroup = FA5AFE0C242A9CAF00BDE4BF;
 			packageReferences = (
 				FA5AFE67242AA09E00BDE4BF /* XCRemoteSwiftPackageReference "Alamofire" */,
+				FA23CC3F242E5E6700344B2E /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = FA5AFE16242A9CAF00BDE4BF /* Products */;
 			projectDirPath = "";
@@ -599,6 +630,7 @@
 			files = (
 				FA1E2BE5242AE58400F33BEA /* CountryTableViewCell.xib in Resources */,
 				FA5AFE25242A9CB000BDE4BF /* LaunchScreen.storyboard in Resources */,
+				FA23CC50242FCCB000344B2E /* GoogleService-Info.plist in Resources */,
 				FA5AFE22242A9CB000BDE4BF /* Assets.xcassets in Resources */,
 				FA1E2BDB242AD35900F33BEA /* InfoGenericView.xib in Resources */,
 				FA5AFE61242A9E8500BDE4BF /* HomeViewController.xib in Resources */,
@@ -725,6 +757,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FA23CC51242FCD0200344B2E /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -733,6 +785,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1E2BCC242AA67300F33BEA /* String+Extension.swift in Sources */,
+				FA23CC4A242EA32300344B2E /* TipsService.swift in Sources */,
 				FA1E2BEC242AF67900F33BEA /* CountryService.swift in Sources */,
 				FA5AFE72242AA2F700BDE4BF /* UIViewController+Extension.swift in Sources */,
 				FA5AFE60242A9E8500BDE4BF /* HomeViewController.swift in Sources */,
@@ -744,14 +797,18 @@
 				FA1E2BEA242AE92400F33BEA /* Global.swift in Sources */,
 				FA5AFE64242A9EAC00BDE4BF /* ViewModelType.swift in Sources */,
 				FA1E2BF2242AF7B100F33BEA /* Constants.swift in Sources */,
+				FA23CC48242E946400344B2E /* Charts.swift in Sources */,
 				FA1E2BC8242AA61C00F33BEA /* PaisViewModel.swift in Sources */,
 				FA5AFE19242A9CAF00BDE4BF /* AppDelegate.swift in Sources */,
 				FA5AFE4E242A9D9800BDE4BF /* PRViewController.swift in Sources */,
+				FA23CC4C242EA34200344B2E /* Tip.swift in Sources */,
 				FA1E2BF6242C3D4800F33BEA /* Int+Extension.swift in Sources */,
 				FA5AFE7A242AA44E00BDE4BF /* NoticiasViewController.swift in Sources */,
+				FA23CC43242E618400344B2E /* Historical.swift in Sources */,
 				FA1E2BF4242AFAD000F33BEA /* GlobalService.swift in Sources */,
 				FA1E2BC6242AA5B600F33BEA /* HomeViewModel.swift in Sources */,
 				FA1E2BE4242AE58400F33BEA /* CountryTableViewCell.swift in Sources */,
+				FA23CC45242E624900344B2E /* HistoricalService.swift in Sources */,
 				FA5AFE66242A9EF400BDE4BF /* ViewControllerType.swift in Sources */,
 				FA1E2BDF242ADD8100F33BEA /* UIView+Extension.swift in Sources */,
 				FA1E2BCA242AA64300F33BEA /* NoticiasViewModel.swift in Sources */,
@@ -928,6 +985,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3HQEA3N4BF;
 				INFOPLIST_FILE = "coronavirus covid19/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -935,10 +994,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.pabloruan.coronavirus-covid19";
-				PRODUCT_NAME = "Coronavirus COVID19";
+				PRODUCT_NAME = "Coronavírus";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -948,6 +1008,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3HQEA3N4BF;
 				INFOPLIST_FILE = "coronavirus covid19/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -955,10 +1016,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.pabloruan.coronavirus-covid19";
-				PRODUCT_NAME = "Coronavirus COVID19";
+				PRODUCT_NAME = "Coronavírus";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1092,6 +1154,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		FA23CC3F242E5E6700344B2E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.13.2;
+			};
+		};
 		FA5AFE67242AA09E00BDE4BF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -1103,6 +1173,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FA23CC40242E5E6700344B2E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA23CC3F242E5E6700344B2E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		FA5AFE68242AA09E00BDE4BF /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FA5AFE67242AA09E00BDE4BF /* XCRemoteSwiftPackageReference "Alamofire" */;

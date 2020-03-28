@@ -10,10 +10,22 @@ import UIKit
 
 class DicasViewController: PRViewController {
 
+    var viewModel: DicasViewModel?
+    
+    override init(viewModel: ViewModelType?) {
+        self.viewModel = viewModel as? DicasViewModel
+        super.init(viewModel: viewModel)
+        self.viewModel?.viewDisplay = self
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.viewModel?.getAllTips()
     }
 
 

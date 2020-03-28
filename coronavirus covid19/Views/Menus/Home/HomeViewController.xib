@@ -47,7 +47,7 @@
                         <constraint firstAttribute="height" constant="400" id="Xh5-3B-8wo"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="400" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KmA-qr-Mr7">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KmA-qr-Mr7">
                     <rect key="frame" x="0.0" y="130" width="414" height="732"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>

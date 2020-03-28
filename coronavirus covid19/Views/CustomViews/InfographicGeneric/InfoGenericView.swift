@@ -17,7 +17,6 @@ class InfoGenericView: UIView {
     @IBOutlet weak var lbTotalInfectados: UILabel!
     @IBOutlet weak var lbTotalMortes: UILabel!
     @IBOutlet weak var lbTotalRecuperados: UILabel!
-    @IBOutlet weak var lbTotalRecuperadosHoje: UILabel!
     @IBOutlet weak var lbTotalMortosHoje: UILabel!
     @IBOutlet weak var lbTotalInfectadosHoje: UILabel!
     @IBOutlet weak var cardProgress: UICircularProgressRing!
@@ -77,13 +76,8 @@ class InfoGenericView: UIView {
     }
     
     func shadownSetup() {
-        cardShadown.layer.cornerRadius = 10
-        cardShadown.layer.masksToBounds = false
-        cardShadown.layer.shadowColor = UIColor.black.cgColor
-        cardShadown.layer.shadowOffset = CGSize(width: 0, height: 0)
-        cardShadown.layer.shadowRadius = 10
-        cardShadown.layer.shadowOpacity = 0.1
-       }
+        cardShadown.shadownDefault()
+    }
     
     func setTotalInfectados(total: String) {
         self.lbTotalInfectados.text = total
@@ -103,9 +97,5 @@ class InfoGenericView: UIView {
 
     func setMortesHoje(mortes: String) {
         self.lbTotalMortosHoje.text = mortes
-    }
-    
-    func setRecuperadosHoje(recuperados: String) {
-        self.lbTotalRecuperadosHoje.text = recuperados
     }
 }

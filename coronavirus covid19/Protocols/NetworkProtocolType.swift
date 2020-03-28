@@ -10,4 +10,5 @@ import Foundation
 
 protocol NetworkProtocolType: class {
     func get<T: Decodable>(url: String, response: T.Type, completion: @escaping (Bool, T?)->Void)
+    func post<T: Decodable, EncodableType: Encodable>(url: String, params: EncodableType?, response: T.Type, completion: @escaping (Bool, T?)->Void)
 }

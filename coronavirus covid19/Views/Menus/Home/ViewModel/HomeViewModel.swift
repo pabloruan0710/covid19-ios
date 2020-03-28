@@ -91,13 +91,17 @@ class HomeViewModel: ViewModelType {
         )
         let viewModel = PaisViewModel(country: country, historical: self.historicalCountry)
         let vc = PaisViewController(viewModel: viewModel)
-        //let navigation = self.viewDisplay?.navigationController
-        //navigation?.navigationBar.isHidden = false
-        //navigation?.navigationBar.prefersLargeTitles = false
-        //navigation?.navigationBar.isTranslucent = false
-        //navigation?.pushViewController(vc, animated: true)
-        self.viewDisplay?.present(vc, animated: true, completion: {
-            self.historicalCountry = nil
-        })
+        
+        if #available(iOS 13.0, *) {
+            self.viewDisplay?.present(vc, animated: true, completion: {
+                self.historicalCountry = nil
+            })
+        } else {
+            let navigation = self.viewDisplay?.navigationController
+            navigation?.navigationBar.isHidden = false
+            navigation?.navigationBar.prefersLargeTitles = false
+            navigation?.navigationBar.isTranslucent = false
+            navigation?.pushViewController(vc, animated: true)
+        }
     }
 }

@@ -25,7 +25,7 @@ class HistoricalService {
     
     func getSpecificCountry(country: Country, historical: [Historical]?) -> Historical? {
         let countryName = country.country?.lowercased()
-        return historical?.first(where: { $0.country == countryName })
+        return historical?.first(where: { $0.country.lowercased() == countryName })
     }
     
     func getCasesDeathsUntilYesterday(historical: [Historical]) -> (cases: Int64, deaths: Int64) {
